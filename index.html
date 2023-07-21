@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calm Down</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- entire body is inside our class app -->
+    <div class="app">
+      <!-- video that we are using as background -->
+      <div class="video-container">
+        <video muted loop > <source src="./video/rain.mp4" type="video/mp4"></video>
+      </div>
+      <div class="time-select-container">
+        <button data-time="120">2 minutes</button>
+        <button data-time="300">5 minutes</button>
+        <button data-time="600">10 minutes</button>
+      </div>
+      <div class="player-container">
+        <!-- sound audio -->
+        <audio class="song">
+          <source src="./sounds/rain.mp3">
+        </audio>
+        <!-- play button -->
+        <img src="./svg/play.svg" class="play"/>
+        <!-- svg for track outline and moving outline -->
+        <svg
+          class="track-outline"
+          width="453"
+          height="453"
+          viewBox="0 0 453 453"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="226.5"
+            cy="226.5"
+            r="216.5"
+            stroke="white"
+            stroke-width="20"
+          />
+        </svg>
+        <svg
+          class="moving-outline"
+          width="453"
+          height="453"
+          viewBox="0 0 453 453"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="226.5"
+            cy="226.5"
+            r="216.5"
+            stroke="#018EBA"
+            stroke-width="20"
+          />
+        </svg>
+        <!-- replay icon -->
+        <img src="./svg/replay.svg" class="replay"></img>
+        <!-- time duration -->
+      
+        <div class="time-display">00:00</div>
+      </div>
+      <div class="sound-picker-container">
+        <!-- we have added video and sound data with the button so that when button is clicked we can access those attributes and set them to this video and sound with the help of .src -->
+        <button data-sound="./sounds/rain.mp3" data-video="./video/rain.mp4">
+          <img src="./svg/rain.svg" alt="rain-svg" />
+        </button>
+        <button data-sound="./sounds/beach.mp3" data-video="./video/beach.mp4">
+          <img src="./svg/beach.svg" alt="beach-svg" />
+        </button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
